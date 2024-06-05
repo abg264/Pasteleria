@@ -1,0 +1,131 @@
+:root{
+    --colorPrimario:#9600ff;
+    --colorSecundario:#f6c5ff;
+    --colorComplementario:#ff9000;
+}
+body {
+    background:url(img/bg.jpg);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    background: #8d7df4;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.logo{
+    width: 100px;
+    /* Menu */
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    gap: 10px;
+    background-color: var(--colorPrimario);
+    
+}
+nav #navHamb{
+    display: none;
+    color: var(--colorSecundario);
+}
+nav #navMenu{
+   display: flex;
+   justify-content: center; 
+}
+
+
+ nav #navMenu a{
+     color: var(--colorSecundario);
+     padding: 10px;
+     text-decoration: none;
+}
+nav a:hover{
+    background: var(--colorComplementario);
+}
+/* Fin menu */
+
+.slogan{
+    color: var(--colorPrimario)
+}
+img{
+     max-width: 100%;
+     border-radius: 10px;
+}
+.text-center{
+    text-align: center;
+}
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+.gallery div{
+    border: 3px solid var(--colorComplementario);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.gallery div img{
+    border-radius: 10px;
+}
+.button{
+    background-color: #b06ce0;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+footer{
+    background: black;
+    color: var(--colorSecundario);
+    padding: 20px;
+    
+}
+.title{
+    color: var(--colorPrimario);
+    border-bottom: 2px solid var(--colorSecundario);
+}
+
+h2{
+    color: var(--colorSecundario);
+}
+.content{
+    padding: 16px;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.productos div{
+    border: 1px solid var(--colorSecundario);
+    border-radius: 7px;
+}
+
+.productos div img{
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+}
+@media (max-width:768px){
+    nav #navHamb{
+        display: block;
+    }
+    nav.navMenu{
+        display: none;
+        flex-direction: column;
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    .productos div img{
+        height: 160px;
+        width: 160px;
+        
+    }
+}
